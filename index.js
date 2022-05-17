@@ -1,8 +1,8 @@
 const EventEmitter = require('events');
 const event = new EventEmitter();
 
-event.on('myfirstevent', () => {
-  console.log('hello this is my event');
+event.on('Status_Check', (sc, msg) => {
+  console.log(`Connected with ${sc} and page is ${msg}`);
 });
 
-event.emit('myfirstevent');
+event.emit('Status_Check', 200, 'ok');
