@@ -1,3 +1,8 @@
-// run `node index.js` in the terminal
+const EventEmitter = require('events');
+const event = new EventEmitter();
 
-console.log(`Hello Node.js v${process.versions.node}!`);
+event.on('myfirstevent', () => {
+  console.log('hello this is my event');
+});
+
+event.emit('myfirstevent');
